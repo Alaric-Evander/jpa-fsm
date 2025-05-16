@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User addNewUser(User user) {
-        user.setPassword(UUID.randomUUID().toString());
+        user.setUserId(UUID.randomUUID().toString());
         return userRepository.save(user);
     }
 
@@ -46,7 +46,11 @@ public class UserServiceImpl implements UserService {
     public void addRoleToUser(String username, String roleName) {
         User user = findUserByUserName(username);
         Role role = findRoleByRoleName(roleName);
-        user.getRoles().add(role);
+        if (user.getRoles() != null) {
+            user.getRoles().add(role);
+            role.getUsers().add(user);
+        }
+        //userRepository.save(user);
 
     }
 }

@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor @AllArgsConstructor
 public class User {
     @Id
-    private String Userid;
+    private String userId;
     @Column(name="USER_NAME" , unique = true, length = 20)
     private String username;
     private String password;
