@@ -15,9 +15,10 @@ public class Role {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String desc;
+    @Column(unique = true, length = 20)
     private String roleNom;
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "USERS_ROLES")
+    //@JoinTable(name = "USERS_ROLES")
     private List<User> users = new ArrayList<>();
 
 }
