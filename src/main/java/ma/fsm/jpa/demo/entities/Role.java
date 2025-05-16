@@ -16,7 +16,7 @@ public class Role {
     private Long id;
     private String desc;
     @Column(unique = true, length = 20)
-    private String roleNom;
+    private String roleName;
     @ManyToMany(fetch = FetchType.EAGER)
     //@JoinTable(name = "USERS_ROLES")
     private List<User> users = new ArrayList<>();
