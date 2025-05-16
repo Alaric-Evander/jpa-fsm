@@ -1,10 +1,22 @@
 package ma.fsm.jpa.demo.entities;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "USERS")
+@Data
+@NoArgsConstructor @AllArgsConstructor
 public class User {
+    @Id
     private String Userid;
     private String username;
     private String password;
-    private List<Role> roles;
+    @ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
+    private List<Role> roles = new ArrayList<>();
 }
