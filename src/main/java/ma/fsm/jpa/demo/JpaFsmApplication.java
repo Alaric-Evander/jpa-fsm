@@ -42,6 +42,20 @@ public class JpaFsmApplication {
 			userService.addRoleToUser("admin","USER");
 			userService.addRoleToUser("admin","ADMIN");
 
+			try{
+				User user=userService.authentificate("user1","123456");
+				System.out.println(user.getUserId());
+				System.out.println(user.getPassword());
+				System.out.println("Roles=>");
+				user.getRoles().forEach(r -> {
+					System.out.println("Role = "+r);
+				});
+
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+
 		};
 	}
 
