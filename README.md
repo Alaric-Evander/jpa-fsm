@@ -36,3 +36,12 @@ Initialisation et Démarrage de l'Application
 L'ensemble est souvent packagé comme une application Spring Boot (@SpringBootApplication), ce qui simplifie grandement la configuration, le déploiement et l'exécution. Spring Boot peut intégrer un CommandLineRunner (déclaré comme un @Bean) pour exécuter du code au démarrage de l'application. Ce mécanisme est fréquemment utilisé pour initialiser la base de données avec des données de test ou des configurations par défaut (par exemple, créer des rôles standards ou un utilisateur administrateur).
 
 En conclusion, l'architecture observée témoigne d'une approche moderne et cohérente du développement d'applications Java. Elle tire parti de la standardisation de JPA pour la persistance, de la puissance et de la simplicité de l'écosystème Spring (Spring Boot, Spring Data, Spring MVC) pour créer des applications robustes, modulaires et maintenables, capables de gérer des domaines fonctionnels variés tels que la gestion hospitalière et la sécurité des accès.
+Captures d'écrand :
+![image](https://github.com/user-attachments/assets/6fad5747-b230-4a49-8609-58056b84739c)
+![image](https://github.com/user-attachments/assets/c3f74df7-2f2d-4ff9-9cae-12920d273008)
+![image](https://github.com/user-attachments/assets/a1c334da-b2fb-45a7-b587-abf043150983)
+![image](https://github.com/user-attachments/assets/ae229431-14e2-4001-8e4a-84f6749a5dfc)
+
+
+
+
